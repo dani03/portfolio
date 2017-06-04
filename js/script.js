@@ -6,20 +6,7 @@ $(document).ready(function(){
          scrollTop:$(lien).offset().top - 50
      }, 1000);
     })
-})
-
-
-// $(window).scroll(function(){
-//     if($(this).scrollTop() > 650){
-//         $('nav').addClass('opaque');
-//     }
-//     else {
-//         $('nav').removeClass('opaque');
-//     }
-// })
-
-
-
+});
 // soleil rotation
 var soleil = $('.soleil');
 var $window = $(window);
@@ -30,12 +17,13 @@ $window.on('scroll',function(){
 });
 
 // mes bars de progression
-function move(){
+
+ function move(){
     var element = document.getElementById('myBar');
     var width = 10;
     var id = setInterval(frame, 10);
     function frame(){
-        if(width >= 65){
+        if(width >= 70){
             clearInterval(id);
         }else{
             width++;
@@ -43,23 +31,67 @@ function move(){
             element.innerHTML = width *1 + '%';
         }
     }
-}
+ }
 
-// jquery
+ function progress(){
+    var element = document.getElementById('barre2');
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame(){
+        if(width >= 70){
+            clearInterval(id);
+        }else{
+            width++;
+            element.style.width = width + '%';
+            element.innerHTML = width *1 + '%';
+        }
+    }
+ }
+// jquery navbar
 $win = $(window);
 // $win.on('scroll',function(){
 //   console.log($win.scrollTop());
 // })
 $win.scroll(function(){
 if($(document).scrollTop() > 650) {
-   $('.navbar').css("background-color","white");
+   $('nav').css("background","white");
+   $('.navbar').css("position","fixed");
 }
 if($(document).scrollTop() < 650){
   $('.navbar').css("background-color","transparent");
+
+
 }
+});
+// slides carousel
+
+var init = 0;
+Carousel();
+
+function Carousel(){
+  var i;
+  var images = document.getElementsByClassName("slides");
+  for(i = 0; i < images.length; i++){
+    images[i].style.display = "none";
+  }
+  init++;
+  if(init > images.length){
+    init = 1
+  }
+    images[init-1].style.display = "block";
+    setTimeout(Carousel,5000);
+  }
+// popup formulaire
+
+$(document).ready(function(){
+  $('#contactMe').on('click',function(){
+    $('#toutesSection').show('slow');
+    $('#contactMe').hide();
+  })
 })
-// parallax effect
-$(window).scroll(function(){
-  var scrollTop = $(this).scrollTop();
-  ('.biglol').css('top',  -(scrollTop * 5) + 'px');
+$(document).ready(function(){
+  $("#close").on('click',function(){
+    $("#toutesSection").hide('slow');
+    $("#contactMe").show('slow');
+  })
 })
