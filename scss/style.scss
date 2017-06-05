@@ -96,7 +96,6 @@ strong{
   color: white;
   font-size: 20px;
   position: absolute;
-  // overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -128,6 +127,8 @@ img{
 }
 h4{
   text-align: center;
+  font-family: 'Lateef', cursive;
+  font-size: 22px;
 }
 #simplonco{
   width: 90px;
@@ -139,7 +140,7 @@ section{
     border-radius: 2px;
   }
 }
-/*mes barres de progression*/
+/*mes barres de progression competences*/
 
       .bars{
         width: 40%;
@@ -157,6 +158,8 @@ section{
   flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
+  font-family: 'Lateef', cursive;
+  font-size: 22px;
 }
 .htmlCss{width: 90%;background-color: #ec662b;}
 .js{width: 60%;background-color: #E8EC00;}
@@ -266,6 +269,8 @@ input[type=submit]{
   border: 2px;
   width: 90px;
   height: 50px;
+  font-family: 'Lateef', cursive;
+  font-size: 20px;
 }
 input[type=submit]:hover{
   color:blue;
@@ -372,4 +377,10 @@ text-align: center;
 .experiences{
   text-align: center;
   font-size: 25px;
+  margin-top: 100px;
+  h3{
+    font-family: 'Lateef', cursive;
+    font-size: 30px;
+    color: black;
+  }
 }

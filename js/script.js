@@ -49,9 +49,9 @@ $window.on('scroll',function(){
  }
 // jquery navbar
 $win = $(window);
-// $win.on('scroll',function(){
-//   console.log($win.scrollTop());
-// })
+$win.on('scroll',function(){
+  console.log($win.scrollTop());
+})
 $win.scroll(function(){
 if($(document).scrollTop() > 650) {
    $('nav').css("background","white");
@@ -59,10 +59,9 @@ if($(document).scrollTop() > 650) {
 }
 if($(document).scrollTop() < 650){
   $('.navbar').css("background-color","transparent");
-
-
 }
 });
+
 // slides carousel
 
 var init = 0;
