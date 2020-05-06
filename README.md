@@ -1,1 +1,2 @@
-# portfolio of some of my small website
+# portfolio 
+some of my first small website 
